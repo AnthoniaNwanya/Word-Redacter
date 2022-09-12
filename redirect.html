@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Redirect</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+       <section>
+       <div><a href="index.html"><button class="gobackbutton">GO BACK</button></a></div>
+        </div>
+       </section>
+    
+       <section>  
+       <div class="wrapper">
+        <p><label class="entermessage">What mesage do you want to send?</label></p>
+        <textarea id="entermessage" cols="8" rows="10" placeholder="Explicit and clear messages go in here."></textarea>
+        </div>
+
+        <div class="wrapper">
+            <p><label class="entermessage">What word(s) do you want redacted?</label></p>
+            <textarea id="enterword" cols="8" rows="10" placeholder="Words you want redacted go in here."></textarea>
+        </div>
+         
+         <div class="option">
+  <select  id="selected" onchange="getOption(this)"> 
+    <option>Choose Redact Style</option>
+    <option value="asterisk">Asterisk(*)</option>
+    <option value="characters">Characters($#?!)</option>
+    <option value="replaceword">Replace Word</option>
+    </select>
+         </div>
+
+         
+            <div class="wrapper">
+            <p><label class="entermessage">Replace with:</label></p>
+            <textarea id="replace" cols="8" rows="10" placeholder="Replacement words go in here."></textarea>
+        </div>
+         
+        <div class="flex-container">
+            <button class="redactbutton" onclick="redactNow()">REDACT NOW</button>
+        </div>
+         
+        <div class="wrapper">
+            <p><label class="entermessage">What your message looks like?</label></p>
+            <textarea id="output" cols="8" rows="10" ></textarea>
+        </div>
+    <div class="flex-container">        
+      <button class="copybtn" onclick="copyText()">Copy</button> 
+    <button class="clearbtn" onclick="clearField()">Clear</button>
+   </div> 
+      <br> 
+         <div class="stats">
+         <h1 class="statstitle">STATISTICS:</h1>
+     <p>Word(s) scanned: <input type="text" name="" id="scannedinput"> </p>
+    <p>Word(s) matched: <input type="text" name="" id="matchedinput"> </p>
+    <p>Character(s) scrambled: <input type="text" name="" id="scrambledinput"> </p>
+    <p>Redactr Timer: <input type="text" name="" id="timer"></p>
+      </div>
+    </section>
+
+
+  
+  <script src="script.js"></script>
+
+ <!--
+This script places a badge on your repl's full-browser view back to your repl's cover page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue, blurple, magenta, pink!
+-->
+<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>
